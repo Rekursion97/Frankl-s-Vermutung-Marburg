@@ -1,0 +1,85 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.21 of 2022/01/12
+%
+\documentclass[runningheads]{llncs}
+%
+\usepackage[T1]{fontenc}
+% T1 fonts will be used to generate the final print and online PDFs,
+% so please use T1 fonts in your manuscript whenever possible.
+% Other font encondings may result in incorrect characters.
+%
+\usepackage{graphicx}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following two lines
+% to display URLs in blue roman font according to Springer's eBook style:
+%\usepackage{color}
+%\renewcommand\UrlFont{\color{blue}\rmfamily}
+%
+\begin{document}
+%
+\title{Frankls Vermutung}
+%
+%\titlerunning{Abbreviated paper title}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{Patrick Grieser}
+%
+\maketitle              % typeset the header of the contribution
+%
+\begin{abstract}
+Frankls Vermutung besagt, dass in jeder unter Vereinigung abgeschlossener Mengenfamilie, es mindestens ein Element gibt, dass in 50\% der Mengen vorkommt.
+\end{abstract}
+%
+%
+%
+\section{Unter Vereinigung abgeschlossene Mengenfamilie}
+Eine Mengenfamilie $F$ ist unter Vereinigung abgeschlossen, wenn gilt $\forall M_{1},M_{2} \in F,\ M_{1}\cup M_{2} \in F$.
+\subsection{Reduktion der Mengenfamilie}
+Gegeben eine unter Vereinigung abgeschlossene Mengenfamilie $F$. Sei $$F_{red} = \{M \in F\ |\ \nexists M_{1},M_{2} \in F\ mit\ M_{1} \cup M_{2} = M\}$$ 
+Folglich ist $F$ komplett aus $F_{red}$ reproduzierbar, da für alle $M \in F$ gilt $M = M_{1} \cup \dots \cup M_{n},\ n \leq \# F_{red}$ 
+\subsubsection{Beispiel:}
+$F = \{\{1, 2, 3, 4\},\{1,2\},\{1,2,3\},\{1,2,4\},\{3\},\{4\},\{3,4\}\}$. Somit entspricht $F_{red} = \{\{1,2\},\{3\},\{4\}\}$.
+\section{Beweis}
+Sei $F$ eine unter Vereinigung abgeschlossene Mengenfamilie und $F_{red}$ die zugehörige Reduktion von $F$. Sei $e_{max}$ das am häufigsten vorkommende Element in $F_{red}$.
+ 
+
+
+\subsubsection{Acknowledgements} Please place your acknowledgments at
+the end of the paper, preceded by an unnumbered run-in heading (i.e.
+3rd-level heading).
+
+%
+% ---- Bibliography ----
+%
+% BibTeX users should specify bibliography style 'splncs04'.
+% References will then be sorted and formatted in the correct style.
+%
+% \bibliographystyle{splncs04}
+% \bibliography{mybibliography}
+%
+\begin{thebibliography}{8}
+\bibitem{ref_article1}
+Author, F.: Article title. Journal \textbf{2}(5), 99--110 (2016)
+
+\bibitem{ref_lncs1}
+Author, F., Author, S.: Title of a proceedings paper. In: Editor,
+F., Editor, S. (eds.) CONFERENCE 2016, LNCS, vol. 9999, pp. 1--13.
+Springer, Heidelberg (2016). \doi{10.10007/1234567890}
+
+\bibitem{ref_book1}
+Author, F., Author, S., Author, T.: Book title. 2nd edn. Publisher,
+Location (1999)
+
+\bibitem{ref_proc1}
+Author, A.-B.: Contribution title. In: 9th International Proceedings
+on Proceedings, pp. 1--2. Publisher, Location (2010)
+
+\bibitem{ref_url1}
+LNCS Homepage, \url{http://www.springer.com/lncs}. Last accessed 4
+Oct 2017
+\end{thebibliography}
+\end{document}
